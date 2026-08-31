@@ -40,9 +40,9 @@ def crop_to_face(bgr, box):
     h, w = bgr.shape[:2]
     x, y, fw, fh = box
     top = max(0, int(y - fh * 0.70))
-    bottom = min(h, int(y + fh * 0.95))
-    left = max(0, int(x - fw * 0.35))
-    right = min(w, int(x + fw * 1.35))
+    bottom = min(h, int(y + fh * 1.80))
+    left = max(0, int(x - fw * 0.55))
+    right = min(w, int(x + fw * 1.55))
     return bgr[top:bottom, left:right]
 
 
